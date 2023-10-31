@@ -28,4 +28,4 @@ class RiderResource(Resource):
             args = patch_parser.parse_args()
             response = update_rider(rider_id, args.premium)
             return make_response(response.to_json(), 200, headers)
-        return 400
+        return make_response("Error Message", 400, headers)
